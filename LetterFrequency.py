@@ -16,17 +16,18 @@ def countLetters(msg):
     freq = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
     for char in msg:
-        if 'a'<=char.lower()<='z':
-            position=ord(char.lower())-ord('a')
+        if "a"<=char.lower()<="z":
+            position=ord(char.lower())-ord("a")
             freq[position]+=1
 
     output = ""
     for index, count in enumerate(freq):
         if count>=0:
-            letter=chr(ord('A')+index)
+            letter=chr(ord("A")+index)
             output+=f"{letter},{count}\n"
-    return output        
-    writeToFile(output)
+        writeToFile(output)
+    return output       
+    
 
 
 def writeToFile(fileText):
@@ -43,14 +44,5 @@ def main():
     msg = input("Enter a message: ")
     result=countLetters(msg)
     print(result)
-#loop through each letter
-    #Find the position in the alphabet
-    #Increase the frequency at that position. If position was 5, then frequencies[5] = frequencies[5] + 1
-        
-
-    #Create the output text in the format A,5\n if there were 5 letter A in the message.
-    #Remember that the \n is the symbol for a new line.
-
-
 if __name__ == '__main__':
   main()
