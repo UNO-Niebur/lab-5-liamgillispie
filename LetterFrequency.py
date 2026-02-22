@@ -19,7 +19,7 @@ def countLetters(msg):
         if 'a'<=char.lower()<='z':
             position=ord(char.lower())-ord('a')
             freq[position]+=1
-#reworked given function to fit the code written
+
     output = ""
     for index, count in enumerate(freq):
         if count>=0:
